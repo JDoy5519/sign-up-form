@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign me up!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 <body>
 
@@ -26,22 +29,28 @@
                     <label for="sign-up">Sign up here!</label>
                 </div>
                 <div class="names">
-                    <input type="text" placeholder="John" id="first-name" required>
+                    <input name=firstName type="text" placeholder="John" id="first-name" autocomplete="given-name" required>
                     <label for="first-name">First Name<em style="color: red;">*</em></label>
-                    <input type="text" placeholder="Smith" id="last-name" required>
+                    <input name=lastName type="text" placeholder="Smith" id="last-name" autocomplete="family-name" required>
                     <label for="last-name">Last Name<em style="color: red;">*</em></label>
                 </div>
                 <div class="email-phone">
                     <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required>
                     <label for="email">E-Mail<em style="color: red;">*</em></label>
-                    <input type="tel" name="phone" id="phone" placeholder="07777 777777" required>
+                    <input type="tel" name="phone" id="phone" required>
                     <label for="phone">Mobile<em style="color: red;">*</em></label>
                 </div>
                 <div class="passwords">
-                    <input type="password" name="password" id="password" placeholder="Password" required>
-                    <label for="password">Password</label>
-                    <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Confirm Password">
-                    <label for="password-confirmation">Confirm Password</label>
+                    <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    minlength="8"
+                    required>
+                    <label for="password">Password (must contain at least 8 characters)</label>
+                    <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Confirm Password" minlength="8">
+                    <label for="password-confirmation">Confirm Password (must contain at least 8 characters)</label>
                 </div>
         </div>
         <div class="structure-div-three">
@@ -56,4 +65,11 @@
 
 
 </body>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
 </html>
