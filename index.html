@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign me up!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="image-logo">
+        <img src="images/united.jpg" alt="Manchester United logo">
+        <img src="images/united-team.jpg" alt="Manchester United squad" //credit to Reuters>
+    </div>
+    <!--this div is for the image and the logo-->
+
+
+    <div class="form-sign">
+        <div class="structure-div-one">
+            <div class="introduction-title">This is a website set up for the purpose of supporting the greatest football team in the land!</div>
+            <div class="introduction-subtitle">If this is something that may interest you fill out your personal details below -></div>
+        </div>
+        <div class="structure-div-two">
+            <form id="sign-up">
+                <div>
+                    <label for="sign-up">Sign up here!</label>
+                </div>
+                <div class="names">
+                    <input type="text" placeholder="John" id="first-name" required>
+                    <label for="first-name">First Name<em style="color: red;">*</em></label>
+                    <input type="text" placeholder="Smith" id="last-name" required>
+                    <label for="last-name">Last Name<em style="color: red;">*</em></label>
+                </div>
+                <div class="email-phone">
+                    <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required>
+                    <label for="email">E-Mail<em style="color: red;">*</em></label>
+                    <input type="tel" name="phone" id="phone" placeholder="07777 777777" required>
+                    <label for="phone">Mobile<em style="color: red;">*</em></label>
+                </div>
+                <div class="passwords">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Confirm Password">
+                    <label for="password-confirmation">Confirm Password</label>
+                </div>
+        </div>
+        <div class="structure-div-three">
+            <div class="submit-button">
+            <input type="submit">
+        </form>
+            </div>
+            <div class="log-in">Already have an account? Please <em style="color: red;">log in here</em></div>
+        </div>
+    </div>
+   <!--This div is for the full sign up form-->
+
+
+</body>
+</html>
