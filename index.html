@@ -12,10 +12,9 @@
 <body>
 
     <div class="image-logo">
-        <img src="images/united.jpg" alt="Manchester United logo">
-        <img src="images/united-team.jpg" alt="Manchester United squad" //credit to Reuters>
+        <img src="images/united-team.jpg" alt="Manchester United squad" class="img1">
     </div>
-    <!--this div is for the image and the logo-->
+    <!--this div is for the logo-->
 
 
     <div class="form-sign">
@@ -24,38 +23,61 @@
             <div class="introduction-subtitle">If this is something that may interest you fill out your personal details below -></div>
         </div>
         <div class="structure-div-two">
-            <form id="sign-up">
                 <div>
-                    <label for="sign-up">Sign up here!</label>
+                    <form id="sign-up">
+                    <label for="sign-up" id="sign-up-here">Sign up here!</label>
                 </div>
-                <div class="names">
-                    <input name=firstName type="text" placeholder="John" id="first-name" autocomplete="given-name" required>
-                    <label for="first-name">First Name<em style="color: red;">*</em></label>
-                    <input name=lastName type="text" placeholder="Smith" id="last-name" autocomplete="family-name" required>
-                    <label for="last-name">Last Name<em style="color: red;">*</em></label>
+
+                <div class="row-placeholder">
+
+                    <div class="label-placeholder">
+                        <input name=firstName type="text" placeholder="John" id="first-name" autocomplete="given-name" required>
+                        <label for="first-name">First Name<em style="color: red;">*</em></label>
+                    </div>
+
+                    <div class="label-placeholder">
+                        <input name=lastName type="text" placeholder="Smith" id="last-name" autocomplete="family-name" required>
+                        <label for="last-name">Last Name<em style="color: red;">*</em></label>
+                    </div>
+
                 </div>
-                <div class="email-phone">
-                    <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required>
-                    <label for="email">E-Mail<em style="color: red;">*</em></label>
-                    <input type="tel" name="phone" id="phone" required>
-                    <label for="phone">Mobile<em style="color: red;">*</em></label>
+
+                <div class="row-placeholder">
+
+                    <div class="label-placeholder">
+                        <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required>
+                        <label for="email">E-Mail<em style="color: red;">*</em></label>
+                    </div>
+
+                    <div class="label-placeholder">
+                        <input type="tel" name="phone" id="phone" required>
+                        <label for="phone">Mobile<em style="color: red;">*</em></label>
+                    </div>
+
                 </div>
-                <div class="passwords">
-                    <input 
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Password"
-                    minlength="8"
-                    required>
-                    <label for="password">Password (must contain at least 8 characters)</label>
-                    <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Confirm Password" minlength="8">
-                    <label for="password-confirmation">Confirm Password (must contain at least 8 characters)</label>
+
+                <div class="row-placeholder">
+                    <div class="label-placeholder">
+                        <input 
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password (min. 8 characters)"
+                        minlength="8"
+                        required>
+                        <label for="password">Password<em style="color: red;">*</em></label>
+                    </div>
+                    
+                    <div class="label-placeholder">
+                        <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Confirm Password (min. 8 characters)" minlength="8" required>
+                        <label for="password-confirmation">Confirm Password<em style="color: red;">*</em></label>
+                    </div>
+                    
                 </div>
         </div>
         <div class="structure-div-three">
             <div class="submit-button">
-            <input type="submit">
+            <input type="submit" id="submit-button">
         </form>
             </div>
             <div class="log-in">Already have an account? Please <em style="color: red;">log in here</em></div>
